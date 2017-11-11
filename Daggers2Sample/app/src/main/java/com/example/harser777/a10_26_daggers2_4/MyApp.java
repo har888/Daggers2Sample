@@ -15,24 +15,21 @@ public class MyApp extends Application {
     private MyComponent myComponent;
     Computer computer;
 
-    /*private static MyApp ourInstance = new MyApp();
+    private static MyApp ourInstance = new MyApp();
 
     public static MyApp getInstance() {
         return ourInstance;
     }
 
     private MyApp() {
-    }*/
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        //DaggerMyComponent is created by framework after build
-        //we use the
+        //DaggerMyComponent is created by framework after build we use:
         myComponent= DaggerMyComponent.builder().computerModule(new ComputerModule()).build();
-       // computer = myComponent.provideComputer();
-
-        //computer.printSpecs();
+  
     }
 
     public MyComponent getComponent(){
