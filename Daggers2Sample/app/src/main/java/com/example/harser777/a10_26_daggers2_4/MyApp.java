@@ -18,6 +18,9 @@ public class MyApp extends Application {
     private static MyApp ourInstance = new MyApp();
 
     public static MyApp getInstance() {
+        if(ourInstance==null){
+            ourInstance = new MyApp;
+        }
         return ourInstance;
     }
 
